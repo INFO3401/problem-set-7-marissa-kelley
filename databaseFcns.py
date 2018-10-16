@@ -13,12 +13,11 @@ import sqlite3
 # parsers.countWordsUnstructured('./state-of-the-union-corpus-1989-2017/Bush_1989.txt')
 import parsers.py
 
+
 ####################################################
 # Part 1
 ####################################################
-
-def populateDatabase(databaseName, wordCounts, metaData):
-    # Write a function that will populate your database
+# Write a function that will populate your database
     # with the contents of the word counts and us_presidents.csv
     # to your database. 
     # Inputs: A string containing the filepath to your database,
@@ -27,10 +26,13 @@ def populateDatabase(databaseName, wordCounts, metaData):
     #         A metadata file containing a dictionary of data
     #         extracted from a supplemental file
     # Outputs: None
+    
+def populateDatabase(databaseName, wordCounts, metaData):
+    
     return 0
 
 # Test your code here
-
+populateDatabase(parsersfunctionprobably, wordCounts, metaData)
 ####################################################
 # Part 2
 ####################################################
