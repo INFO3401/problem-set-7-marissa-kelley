@@ -13,7 +13,6 @@ import sqlite3
 # parsers.countWordsUnstructured('./state-of-the-union-corpus-1989-2017/Bush_1989.txt')
 import parsers.py
 
-
 ####################################################
 # Part 1
 ####################################################
@@ -53,3 +52,9 @@ def computeLengthByParty(databaseName):
     # Outputs: The average speech length for presidents of each 
     #          of the two major political parties.
     return 0
+
+####################################################
+# WEDNESDAY WORK 
+#I worked with Taylor and Hannah 
+####################################################
+
