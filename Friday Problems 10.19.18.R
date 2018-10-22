@@ -1,5 +1,6 @@
 #Friday's Work for Problem Set 7
 #Marissa Kelley 
+#I worked with Hannah and Taylor 
 
 ######PROBLEM 6###########
 #Store the contents of the csv data into a variable in R
@@ -21,13 +22,15 @@ titanic$"Survived"
 table(titanic$PassengerId,Survived)
 
 #Create a table that outlines the distribution of genders
-#prop.table(titanic.csv)
+prop.table(gender_table)
+gender_table = prop.table(table(titanic$"Sex", titanic$"Survived"))
 
 ######PROBLEM 8###########
 #Compute the proportion of men & women who survived
 prop.table(gender_table)
+
 #prop.table(table(Sex$male,survived$1))
-gender_table = prop.table(table("Sex","Survived"))
+gender_table = prop.table(table(titanic$"Sex",titanic$"Survived"))
 print(gender_table)
 
 #Probability of survival for men and women
@@ -37,11 +40,11 @@ print(gender_table)
 ######PROBLEM 9###########
 #Create a new column with age to define a child
 #Child (0-18) = 1, Adult(18+) = 0
-titanic$"Child"<=18
+titanic$"Child"<=0
 titanic$"Child"[titanic$"Age"<18]<-1
-aggregate(titanic, by = list(R$"Sex", R$"Survived"), FUN = "mean")
-aggregate(titanic, by = list(R$"Gender", R$"Survived"), FUN = "mean")
 
-#Find the average number of survivors for men & women
+#Find the average number of survivors for men and women
+aggregate(titanic, by = list(R$"Sex", R$"Survived"), FUN = "mean")
 
 #Find the average number of survivors for children and adults
+aggregate(titanic, by = list(R$"Child", R$"Survived"), FUN = "mean")
