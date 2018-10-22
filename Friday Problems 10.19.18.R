@@ -1,6 +1,6 @@
 #Friday's Work for Problem Set 7
 #Marissa Kelley 
-#I worked with Hannah and Taylor 
+#I worked with Hannah and Taylor and Jacob and Jack 
 
 ######PROBLEM 6###########
 #Store the contents of the csv data into a variable in R
