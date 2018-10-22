@@ -3,7 +3,7 @@
 
 ######PROBLEM 6###########
 #Store the contents of the csv data into a variable in R
-titanic = read.csv(file=titanic.csv,head=TRUE,sep=",")
+titanic = read.csv(file="titanic.csv",head=TRUE,sep=",")
 #Print the variable
 print(titanic)
 
@@ -18,7 +18,7 @@ names(titanic)
 titanic$"PassengerId"
 titanic$"Survived"
 
-table(titanic.csv$PassengerId,Survived)
+table(titanic$PassengerId,Survived)
 
 #Create a table that outlines the distribution of genders
 #prop.table(titanic.csv)
