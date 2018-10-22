@@ -19,8 +19,6 @@ names(titanic)
 titanic$"PassengerId"
 titanic$"Survived"
 
-table(titanic$PassengerId,Survived)
-
 #Create a table that outlines the distribution of genders
 prop.table(gender_table)
 gender_table = prop.table(table(titanic$"Sex", titanic$"Survived"))
@@ -30,8 +28,8 @@ gender_table = prop.table(table(titanic$"Sex", titanic$"Survived"))
 prop.table(gender_table)
 
 #prop.table(table(Sex$male,survived$1))
-gender_table = prop.table(table(titanic$"Sex",titanic$"Survived"))
-print(gender_table)
+gender_tables = prop.table(table(titanic$"Sex",titanic$"Survived"))
+print(gender_tables)
 
 #Probability of survival for men and women
 #prop.table(table(Sex$female,survived$1))
@@ -44,7 +42,7 @@ titanic$"Child"<=0
 titanic$"Child"[titanic$"Age"<18]<-1
 
 #Find the average number of survivors for men and women
-aggregate(titanic, by = list(R$"Sex", R$"Survived"), FUN = "mean")
+aggregate(titanic, by = list(titanic$"Sex", titanic$"Survived"), FUN = "mean")
 
 #Find the average number of survivors for children and adults
-aggregate(titanic, by = list(R$"Child", R$"Survived"), FUN = "mean")
+aggregate(titanic, by = list(titanic$"Child", titanic$"Survived"), FUN = "mean")
